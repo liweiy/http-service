@@ -26,15 +26,15 @@ maven引入
 &le;/dependency&ge;
 
 spring的方式使用client
-{
-<bean name="messageService3" class="com.istock.base.httpService.client.HttpProxyFactoryCglib">
-    <property name="targetClass" value="com.ncf.sampleService.MessageService"></property>
-    <property name="endPoint" value="http://localhost:8081/sampleService"></property>
-    <property name="signKey" value="xxxxxxxxxxx"></property>
-    <property name="systemCode" value="002"></property>
-    <property name="needSign" value="true"></property>
-</bean>
-}
+
+&le;bean name="messageService3" class="com.istock.base.httpService.client.HttpProxyFactoryCglib"&ge;
+    &le;property name="targetClass" value="com.ncf.sampleService.MessageService"&ge;&le;/property&ge;
+    &le;property name="endPoint" value="http://localhost:8081/sampleService"&ge;&le;/property&ge;
+    &le;property name="signKey" value="xxxxxxxxxxx"&ge;&le;/property&ge;
+    &le;property name="systemCode" value="002"&ge;&le;/property&ge;
+    &le;property name="needSign" value="true"&ge;&le;/property&ge;
+&le;/bean>
+
 在代码里面直接使用@autowaired自动装载接口实现
 @Resource(name="messageService3")
 private MessageService messageService;
