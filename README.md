@@ -18,14 +18,16 @@ CXF流行的优点不能放弃
 
 使用方式
 maven引入
+{
 <dependency>
 		<groupId>com.9istock.base</groupId>
 		<artifactId>http-service</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<scope>test</scope>
 </dependency>
-
+}
 spring的方式使用client
+{
 <bean name="messageService3" class="com.istock.base.httpService.client.HttpProxyFactoryCglib">
     <property name="targetClass" value="com.ncf.sampleService.MessageService"></property>
     <property name="endPoint" value="http://localhost:8081/sampleService"></property>
@@ -33,7 +35,7 @@ spring的方式使用client
     <property name="systemCode" value="002"></property>
     <property name="needSign" value="true"></property>
 </bean>
-
+}
 在代码里面直接使用@autowaired自动装载接口实现
 @Resource(name="messageService3")
 private MessageService messageService;
