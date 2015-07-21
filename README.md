@@ -18,22 +18,22 @@ CXF流行的优点不能放弃
 
 使用方式
 maven引入
-&le;dependency&ge;
-		&le;groupId&ge;com.9istock.base&le;/groupId&ge;
-		&le;artifactId&ge;http-service&le;/artifactId&ge;
-		&le;version&ge;1.0.0-SNAPSHOT&le;/version&ge;
-		&le;scope&ge;test&le;/scope&ge;
-&le;/dependency&ge;
+&lt;dependency&gt;
+		&lt;groupId&gt;com.9istock.base&lt;/groupId&gt;
+		&lt;artifactId&gt;http-service&lt;/artifactId&gt;
+		&lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+		&lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
 
 spring的方式使用client
 
-&le;bean name="messageService3" class="com.istock.base.httpService.client.HttpProxyFactoryCglib"&ge;
-    &le;property name="targetClass" value="com.ncf.sampleService.MessageService"&ge;&le;/property&ge;
-    &le;property name="endPoint" value="http://localhost:8081/sampleService"&ge;&le;/property&ge;
-    &le;property name="signKey" value="xxxxxxxxxxx"&ge;&le;/property&ge;
-    &le;property name="systemCode" value="002"&ge;&le;/property&ge;
-    &le;property name="needSign" value="true"&ge;&le;/property&ge;
-&le;/bean>
+&lt;bean name="messageService3" class="com.istock.base.httpService.client.HttpProxyFactoryCglib"&gt;
+    &lt;property name="targetClass" value="com.ncf.sampleService.MessageService"&gt;&lt;/property&gt;
+    &lt;property name="endPoint" value="http://localhost:8081/sampleService"&gt;&lt;/property&gt;
+    &lt;property name="signKey" value="xxxxxxxxxxx"&gt;&lt;/property&gt;
+    &lt;property name="systemCode" value="002"&gt;&lt;/property&gt;
+    &lt;property name="needSign" value="true"&gt;&lt;/property&gt;
+&lt;/bean&gt;
 
 在代码里面直接使用@autowaired自动装载接口实现
 @Resource(name="messageService3")
