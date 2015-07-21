@@ -18,14 +18,13 @@ CXF流行的优点不能放弃
 
 使用方式
 maven引入
-{
-<dependency>
-		<groupId>com.9istock.base</groupId>
-		<artifactId>http-service</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
-		<scope>test</scope>
-</dependency>
-}
+&le;dependency&ge;
+		&le;groupId&ge;com.9istock.base&le;/groupId&ge;
+		&le;artifactId&ge;http-service&le;/artifactId&ge;
+		&le;version&ge;1.0.0-SNAPSHOT&le;/version&ge;
+		&le;scope&ge;test&le;/scope&ge;
+&le;/dependency&ge;
+
 spring的方式使用client
 {
 <bean name="messageService3" class="com.istock.base.httpService.client.HttpProxyFactoryCglib">
